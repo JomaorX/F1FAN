@@ -1,0 +1,16 @@
+footer {
+    text-align: center;
+    padding: 1em 0;
+    color: #fff;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: #333;
+}
+
+footer div a{
+    padding: 1em;
+}
+footer img{
+    filter: invert(1) brightness(2);
+}
