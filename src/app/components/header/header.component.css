@@ -1,12 +1,12 @@
 nav {
-    background-color: #333;
+    background-color: #A8A79E;
     padding: 10px;
+    font-weight: bold;
   }
   
   ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+
     display: flex;
   }
   
@@ -25,6 +25,5 @@ nav {
   }
   
   .active {
-    font-weight: bold;
     color: #ffcc00; /* Cambia el color para resaltar la página activa */
   }
