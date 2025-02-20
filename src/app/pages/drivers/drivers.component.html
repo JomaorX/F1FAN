@@ -1,0 +1,15 @@
+<p>Pilotos:</p>
+
+<ul class="user-list">
+    @for (driver of formulaService.drivers; track driver.driver_number) {
+        <li>
+            <div class="driver-container">
+                <img [src]="driver.headshot_url" alt="{{ driver.name }}">
+                <h2>{{ driver.name }}</h2>
+                <p>Número: {{ driver.driver_number }}</p>
+                <p>Equipo: {{ driver.team_name }}</p>
+                <a [routerLink]="[driver.driver_number,driver.session_key]">Ver más</a>
+            </div>
+        </li>
+    }
+</ul>
