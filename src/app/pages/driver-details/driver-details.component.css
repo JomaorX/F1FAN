@@ -1,8 +1,9 @@
 .driver-card {
+    width: fit-content;
     display: flex;
     border-radius: 12px;
     overflow: hidden;
-    margin: 20px;
+    margin: 0 auto;
     padding: 20px;
 }
 

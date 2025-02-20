@@ -1,21 +1,33 @@
-/* Estilo general */
+/* Estilos globales */
 *, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: #efefef;
-  min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
+body, html {
+  height: 100%;
+}
+
+
+
+app-root {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #efefef; /* Color gris claro para los márgenes */
 }
 
 .content-container {
-  max-width: 1200px; /* Ajusta este valor según sea necesario */
-  margin: 0 auto; /* Centra el contenido horizontalmente */
-  padding: 20px; /* Ajusta este valor según sea necesario */
-  background-color: #ffffff; /* Fondo blanco para el contenido principal */
-  flex: 1; /* Ocupa todo el espacio disponible */
+  flex-grow: 1;
+  max-width: auto;
+  width: 85%;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco para el contenido */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: le da un ligero sombreado */
+  border-radius: 8px; /* Opcional: bordes redondeados */
 }

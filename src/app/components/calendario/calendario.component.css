@@ -14,14 +14,19 @@
         box-shadow: 0 5px 0px #f00;
     }
     img{
+        width: 100%;
+        max-width:fit-content;
         margin: 1rem 0;
     }
 
     .texto{
-        background-color: #ededed;
+        width: 80%;
+        font-size: 1.1em;
+        background-color: #0002;
         padding: 1em;
-        border: 1px solid #f00;
+        border-radius: 8px;
         text-align: justify;
+        box-shadow: 3px 3px 0px #f007;
     }
 }
 

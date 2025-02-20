@@ -1,16 +1,19 @@
-<div class="content-container">
-    <h1>Inserta tu comentario</h1>
-    <form [formGroup]="comentForm" (submit)="handleSubmit()"> 
-            <label for="usuario-nombre">Nombre de usuario:</label>
-            <input type="text" formControlName="user" id="usuario-nombre">
-            @if (user.invalid && user.touched) {
-                <p class="form-error">Nombre de usuario es requerido</p>
-              }
-            <label for="texto-comentario">Comentario:</label>
-            <input type="text" formControlName="comment" id="texto-comentario">
-            @if (comment.invalid && comment.touched) {
-                <p class="form-error">Texto del comentario es requerido</p>
-              }
-        <button >Enviar</button>
-    </form>
-</div>
+
+    <div class="main-container">
+      <div class="form-container">
+        <h1>Inserta tu comentario</h1>
+      <form autocomplete="off" [formGroup]="comentForm" (submit)="handleSubmit()"> 
+              <label for="usuario-nombre">Nombre de usuario:</label>
+              <input type="text" formControlName="user" id="usuario-nombre">
+              @if (user.invalid && user.touched) {
+                  <p class="form-error">Nombre de usuario es requerido</p>
+                }
+              <label for="texto-comentario">Comentario:</label>
+              <input type="text" formControlName="comment" id="texto-comentario">
+              @if (comment.invalid && comment.touched) {
+                  <p class="form-error">Texto del comentario es requerido</p>
+                }
+          <button [disabled]="comentForm.invalid">Enviar</button>
+      </form>
+    </div>
+    </div>

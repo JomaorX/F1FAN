@@ -13,18 +13,15 @@ export class FormularioComponent {
   comentForm: FormGroup;
   user: FormControl;
   comment: FormControl;
-  fecha: FormControl;
 
   constructor(public formulaService: FormulaService){
     this.user = new FormControl('', Validators.required);
     this.comment = new FormControl('', Validators.required);
-    this.fecha = new FormControl('', Validators.required);
   
 
     this.comentForm = new FormGroup({
       user: this.user,
-      comment: this.comment,
-      fecha: this.fecha
+      comment: this.comment
     })
   }
 
@@ -41,5 +38,6 @@ export class FormularioComponent {
     console.log("Comentario enviado",newComment);
     
     this.formulaService.addComment(newComment);
+    this.comentForm.reset();
   }
 }
