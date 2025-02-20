@@ -1,0 +1,1 @@
+*,body{margin:0;padding:0;box-sizing:border-box}body,html{height:100%}app-root{display:flex;flex-direction:column;min-height:100vh}body{background-color:#efefef}.content-container{flex-grow:1;max-width:auto;width:85%;margin:auto;padding:20px;background-color:#fff;box-shadow:0 0 10px #0000001a;border-radius:8px}
