@@ -29,10 +29,14 @@ export class FormularioComponent {
   }
 
   handleSubmit(){
+    const currentDate = new Date().toISOString();
+      const isoDate = currentDate.substring(0, 10);
+      const formattedDate = isoDate.split('-').reverse().join('/');
+      
     const newComment: Coment = {
       user: this.comentForm.value.user,
       comment: this.comentForm.value.comment,
-      fecha: new Date().toISOString()
+      fecha: formattedDate
     }
     console.log("Comentario enviado",newComment);
     
