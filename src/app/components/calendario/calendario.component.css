@@ -1,0 +1,29 @@
+.noticia{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: #a00;
+    }
+    h2 {
+        color: #555;
+        box-shadow: 0 5px 0px #f00;
+    }
+    img{
+        margin: 1rem 0;
+    }
+
+    .texto{
+        background-color: #ededed;
+        padding: 1em;
+        border: 1px solid #f00;
+        text-align: justify;
+    }
+}
+
+
+

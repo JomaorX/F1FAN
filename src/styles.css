@@ -1,7 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+/* Estilo general */
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efefef;
+  min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  max-width: 1200px; /* Ajusta este valor según sea necesario */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  padding: 20px; /* Ajusta este valor según sea necesario */
+  background-color: #ffffff; /* Fondo blanco para el contenido principal */
+  flex: 1; /* Ocupa todo el espacio disponible */
+}

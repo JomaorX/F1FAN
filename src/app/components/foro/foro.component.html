@@ -1,0 +1,13 @@
+<div class="content-container">
+    <div class="comments-container">
+        @for (comentario of formulaService.coments; track comentario.user) {
+            <div class="comment-card">
+                <div class="user-info">
+                    <h3>{{ comentario.user }}</h3>
+                    <small>{{ comentario.fecha }}</small>
+                </div>
+                <p>{{ comentario.comment }}</p>
+            </div>
+        }
+    </div>
+</div>

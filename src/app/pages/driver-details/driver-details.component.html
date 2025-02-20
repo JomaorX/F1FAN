@@ -1,1 +1,45 @@
-<p>driver-details works!</p>
+<div class="content-container">
+    <div class="driver-card" [style.backgroundColor]="getBackgroundColor(selectedDriver)">
+        <div class="driver-image">
+            @if (selectedDriver.driver_number === 43) {
+                <img height="100px" src="colapinto.png" alt="{{ selectedDriver.full_name }}">
+            }
+            @else if (selectedDriver.driver_number === 30) {
+                <img height="100px" src="liam.png" alt="{{ selectedDriver.full_name }}">
+            }
+            @else if (selectedDriver.driver_number === 61) {
+                <img height="100px" src="jack.png" alt="{{ selectedDriver.full_name }}">
+            }
+            @else if (selectedDriver.headshot_url) {
+                <img [src]="selectedDriver.headshot_url" alt="{{ selectedDriver.full_name }}">
+            }
+            @else {
+                <div class="placeholder">No Image</div>
+            }
+        </div>
+        <div class="driver-info">
+            <h2>{{ selectedDriver.full_name }}</h2>
+            <p><strong>Nombre:</strong> {{ selectedDriver.first_name }} {{ selectedDriver.last_name }}</p>
+            <p><strong>Número de piloto:</strong> {{ selectedDriver.driver_number }}</p>
+            <p><strong>Equipo:</strong>
+                @if (selectedDriver.driver_number === 43) {
+                    Alpine
+                }
+                @else if (selectedDriver.driver_number === 30) {
+                    RB
+                }
+                @else if (selectedDriver.driver_number === 61) {
+                    Alpine
+                }
+                @else if (selectedDriver.team_name) {
+                    {{ selectedDriver.team_name }}
+                }
+                @else {
+                    No Team
+                }
+            </p>
+            <p><strong>Código del país:</strong> {{ selectedDriver.country_code }}</p>
+            <p><strong>Acronimo:</strong> {{ selectedDriver.name_acronym }}</p>
+        </div>
+    </div>
+</div>

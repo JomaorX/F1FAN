@@ -1,15 +1,41 @@
-<p>Pilotos:</p>
-
-<ul class="user-list">
-    @for (driver of formulaService.drivers; track driver.driver_number) {
-        <li>
-            <div class="driver-container">
-                <img [src]="driver.headshot_url" alt="{{ driver.name }}">
-                <h2>{{ driver.name }}</h2>
-                <p>Número: {{ driver.driver_number }}</p>
-                <p>Equipo: {{ driver.team_name }}</p>
-                <a [routerLink]="[driver.driver_number,driver.session_key]">Ver más</a>
-            </div>
-        </li>
-    }
-</ul>
+<main class="content-container">
+    <div class="container">
+        @for (driver of formulaService.drivers; track driver.driver_number) {
+            <li>
+                <a [routerLink]="[driver.driver_number,driver.session_key]">
+                    <div class="card">
+                        <div class="card-image">
+                            @if (driver.driver_number === 43){
+                                        <img height="100px" src="colapinto.png" alt="{{ driver.name }}">
+                                    }
+                                    @else if (driver.driver_number === 30) {
+                                        <img height="100px" src="liam.png" alt="{{ driver.name }}">
+                                    }
+                                    @else if (driver.driver_number === 61) {
+                                        <img height="100px" src="jack.png" alt="{{ driver.name }}">
+                                    }
+                                    @else {
+                                        <img [src]="driver.headshot_url" alt="{{ driver.name }}">
+                                    }
+                        </div>
+                        <div class="card-content">
+                            <h2 class="card-title">{{ driver.full_name }}</h2>
+                            @if (driver.driver_number === 43){
+                                <p class="card-subtitle">Williams</p>
+                            }
+                            @else if (driver.driver_number === 30) {
+                                <p class="card-subtitle">RB</p>
+                            }
+                            @else if (driver.driver_number === 61) {
+                                <p class="card-subtitle">Alpine</p>
+                            }
+                            @else {
+                                <p class="card-subtitle">{{ driver.team_name }}</p>
+                            }
+                        </div>
+                        </div>
+                </a>
+            </li>
+        }
+    </div>
+</main>
